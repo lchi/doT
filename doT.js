@@ -22,8 +22,9 @@
 			append:		true,
 			selfcontained: false
 		},
-		template: undefined, //fn, compile template
-		compile:  undefined  //fn, for express
+		template:   undefined, //fn, compile template
+		compile:    undefined, //fn, for express
+    precompile: undefined  //fn, resolve defs only
 	};
 
 	if (typeof module !== 'undefined' && module.exports) {
@@ -132,4 +133,9 @@
 	doT.compile = function(tmpl, def) {
 		return doT.template(tmpl, null, def);
 	};
+
+  doT.precompile = function(tmpl, c, def) {
+    return (((c = c || doT.templateSettings).use) || c.define) ? resolveDefs(c, tmpl, def || {}) : tmpl;
+  };
+
 }());
