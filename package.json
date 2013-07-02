@@ -1,5 +1,5 @@
 {
-  "name": "dot",
+  "name": "dot-wtf",
   "description": "Concise and fast javascript templating compatible with nodejs and other javascript environments",
   "keywords": [
     "template",
@@ -7,14 +7,14 @@
     "simple",
     "templating"
   ],
-  "version": "1.0.0",
+  "version": "1.0.0a",
   "main": "index",
   "bin": {
     "dottojs": "./bin/dot-packer"
   },
   "homepage": "http://github.com/olado/doT",
   "repository": "git://github.com/olado/doT.git",
-  "author": "Laura Doktorova <ldoktorova@gmail.com>",
+  "author": "Lucas Chi <lucas@okcupid.com>",
   "engines": [
     "node >=0.2.6"
   ],
